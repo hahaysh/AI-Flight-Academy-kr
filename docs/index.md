@@ -3,7 +3,7 @@ layout: home
 head:
   - - meta
     - http-equiv: refresh
-      content: "0; url=./ko/"
+      content: "0; url=./ko/?from=root"
   - - link
     - rel: canonical
       href: https://hahaysh.github.io/AI-Flight-Academy-kr/ko/
