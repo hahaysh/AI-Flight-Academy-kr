@@ -1,5 +1,12 @@
 ---
 layout: home
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=./ko/"
+  - - link
+    - rel: canonical
+      href: https://hahaysh.github.io/AI-Flight-Academy-kr/ko/
 
 hero:
   name: AI Flight Academy

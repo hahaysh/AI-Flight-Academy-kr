@@ -21,6 +21,7 @@ export default defineConfig({
     root: {
       label: "English",
       lang: "en-US",
+      link: "https://microsoftlearning.github.io/AI-Flight-Academy/",
       themeConfig: {
         nav: [
           { text: en.nav.home, link: "/" },
