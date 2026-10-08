@@ -11,7 +11,7 @@ export function getMessages(locale: SiteLocale = "en"): SiteMessages {
 }
 
 export function localeFromPath(path: string): SiteLocale {
-  return /^\/(?:AI-Flight-Academy\/)?ko(?:\/|$)/.test(path) ? "ko" : "en";
+  return /(?:^|\/)ko(?:\/|$)/.test(path) ? "ko" : "en";
 }
 
 export function localizedPath(path: string, locale: SiteLocale = "en"): string {
