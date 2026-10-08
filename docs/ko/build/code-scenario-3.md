@@ -41,7 +41,7 @@ Contoso의 AI 스킬링 앰배서더 프로그램은 본업과 함께 오피스 
 
 아래 스타터를 다운로드하세요.
 
-<a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-starter.zip" download style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/ambassador-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
   <span class="lab-card-title">스타터</span>
   <span class="lab-card-desc">작동하는 코호트 스크립트, 세 가지 대안 정의, 9개 데이터 파일입니다.</span>

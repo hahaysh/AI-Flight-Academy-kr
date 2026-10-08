@@ -9,7 +9,7 @@
     },
     "docs/about.md": {
       "translation": "docs/ko/about.md",
-      "sourceHash": "205b278762059546c1c256fcb6f89eb55f4f4343f9c952db7fd0b56a2f782096"
+      "sourceHash": "cfdf7ab90a9f78e4ab4b82e9dab656d620eefd9de59341d52a14a3baabf5ee61"
     },
     "docs/glossary.md": {
       "translation": "docs/ko/glossary.md",
@@ -21,39 +21,39 @@
     },
     "docs/build/cowork-scenario-1.md": {
       "translation": "docs/ko/build/cowork-scenario-1.md",
-      "sourceHash": "499964ce62449a03ae995778358be3c19e872249df0a13569cbd8533e1229597"
+      "sourceHash": "b94d2b5061f82d9629a6567f586c0f0ec4aff007e1b54d77a250b87c8b31299d"
     },
     "docs/build/scout-scenario-1.md": {
       "translation": "docs/ko/build/scout-scenario-1.md",
-      "sourceHash": "8b4f71b082c32f64dd23bbec9d8f5ed727eac433919ee8e11d99f7d40d1aeb6b"
+      "sourceHash": "e91ca3e4e577028a183f3f1ad7d59c896a0102fc334dc0f832f6d51d38767c3d"
     },
     "docs/build/code-scenario-1.md": {
       "translation": "docs/ko/build/code-scenario-1.md",
-      "sourceHash": "d51cd2a883f13b103276c8ec627bdf7bf1324aefc20ea7f0fa17227d28a07dc9"
+      "sourceHash": "682472b54be70c1f8667bd5b0ca54a51e81f263f9ff663ccb71d08f7b138b9fe"
     },
     "docs/build/cowork-scenario-2.md": {
       "translation": "docs/ko/build/cowork-scenario-2.md",
-      "sourceHash": "c0889ced7c12120a1cb77a4c851da47be8efd13abc6715d69a103d60742d22d3"
+      "sourceHash": "f9144ba421d6a0a926fa8b4a144602b21f4e14b45a0447da5d78ef73f9f3bb70"
     },
     "docs/build/scout-scenario-2.md": {
       "translation": "docs/ko/build/scout-scenario-2.md",
-      "sourceHash": "0f6d71bdbd80b31b65dda0d8ab155d29a616b05103191ad86f35107e49386593"
+      "sourceHash": "e7f8c761b0c3ec05d362976ca84dd19286c705bd6fb26dac9fd54aba1801ce76"
     },
     "docs/build/code-scenario-2.md": {
       "translation": "docs/ko/build/code-scenario-2.md",
-      "sourceHash": "24653bfc227bc6682399c361f7e2bdd344ec2fe1bac7b422ae14a7083b3eb990"
+      "sourceHash": "f72779fcc49e5d1efcefab379a9c89b339b69b0efd695191a64e3e6cb7ae8e93"
     },
     "docs/build/cowork-scenario-3.md": {
       "translation": "docs/ko/build/cowork-scenario-3.md",
-      "sourceHash": "f91924c8f2e507af2294587432047d8e530e6ddf9c9b306cabd12b3a0bd2b75a"
+      "sourceHash": "f909c1f5896aa7e1214edea3c3863644e876b415c9c2bc77a565b040f2a70929"
     },
     "docs/build/scout-scenario-3.md": {
       "translation": "docs/ko/build/scout-scenario-3.md",
-      "sourceHash": "05dc8650366e64fca1690e06a42caf4ef017b98b94caf06db8d5fa4cf5d9202a"
+      "sourceHash": "bf933c3cfcddf5954cd8c7893e63f83254331396ec67ba5b60bfdd4ca872ccfe"
     },
     "docs/build/code-scenario-3.md": {
       "translation": "docs/ko/build/code-scenario-3.md",
-      "sourceHash": "4ce2d5b73e6f7338fc4cddee31620164bab3610d2eab59dca2d1907244538a71"
+      "sourceHash": "56a68d5f3ab7851e71191713f3b4f9506d5cac2abcaa1fb0643c8ea2c4a7eb22"
     }
   }
 }

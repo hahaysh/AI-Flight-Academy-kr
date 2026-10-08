@@ -48,7 +48,7 @@ You don't need to write a persona today. The starter ships as **Jordan Reyes**, 
 
 Download the starter below.
 
-<a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/twin-code-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
   <span class="lab-card-title">Starter</span>
   <span class="lab-card-desc">A fictional twin, ready to answer. One call that reaches it from Python, four worked examples spanning code and non-code, an MCP server, and a make-it-yours interview.</span>

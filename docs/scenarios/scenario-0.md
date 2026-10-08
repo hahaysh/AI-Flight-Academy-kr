@@ -36,19 +36,19 @@ hero:
 <p class="home-section-intro is-wide">Pick where you can get something done today. This isn't a Team Week commitment - you can switch later. Each altitude has its own guide with the exact steps.</p>
 
 <div class="lab-grid lab-grid-3">
-  <a class="lab-card" href="/AI-Flight-Academy/build/cowork-scenario-0">
+  <a class="lab-card" href="/AI-Flight-Academy-kr/build/cowork-scenario-0">
     <span class="lab-card-emoji">🟢</span>
     <span class="lab-card-title">Cowork</span>
     <span class="lab-card-desc">Chat-only, nothing to install. Complete a flight from the Cowork course.</span>
     <span class="lab-card-cta">Start with Cowork →</span>
   </a>
-  <a class="lab-card" href="/AI-Flight-Academy/build/scout-scenario-0">
+  <a class="lab-card" href="/AI-Flight-Academy-kr/build/scout-scenario-0">
     <span class="lab-card-emoji">🔵</span>
     <span class="lab-card-title">Scout</span>
     <span class="lab-card-desc">Describe what you want and Scout builds it. Build an assistant that briefs you in Teams.</span>
     <span class="lab-card-cta">Start with Scout →</span>
   </a>
-  <a class="lab-card" href="/AI-Flight-Academy/build/code-scenario-0">
+  <a class="lab-card" href="/AI-Flight-Academy-kr/build/code-scenario-0">
     <span class="lab-card-emoji">🟣</span>
     <span class="lab-card-title">Code</span>
     <span class="lab-card-desc">VS Code + GitHub Copilot. Install Work IQ and build a weekly status report.</span>

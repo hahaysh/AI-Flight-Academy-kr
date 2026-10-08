@@ -42,13 +42,13 @@ For more definitions, see the [Glossary](/glossary).
 Download both files below and keep them in the same folder.
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy-kr/downloads/ambassador-skill.zip" download>
     <span class="lab-card-emoji">🎖️</span>
     <span class="lab-card-title">Ambassador skill</span>
     <span class="lab-card-desc">How the program picks its next eight, plus three alternative definitions of what it's looking for. This is the "before" you compare against.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy-kr/downloads/ambassador-program-data.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Program data</span>
     <span class="lab-card-desc">72 candidates and ~2,000 evidence records across nine files. Use these instead of real people data.</span>

@@ -49,13 +49,13 @@ title: Dispatch - Scout
 두 파일을 모두 다운로드하여 같은 폴더에 보관하세요.
 
 <div class="lab-grid lab-grid-2">
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🔵</span>
 		<span class="lab-card-title">Dispatch 스킬</span>
 		<span class="lab-card-desc">방이 요청을 라우팅하는 방식과 분류 담당자 한 명의 결정을 담고 있습니다. 비교 기준이 되는 "이전" 상태이며 절대 바뀌지 않습니다.</span>
 		<span class="lab-card-cta">.zip 다운로드 →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">데이터 팩</span>
 		<span class="lab-card-desc">샘플 요청, Global Skilling 팀 카드, 라우팅 규칙입니다. 실제 업무 데이터 대신 사용하세요.</span>

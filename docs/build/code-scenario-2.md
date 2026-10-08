@@ -58,19 +58,19 @@ Each zip already contains its own folder, so Windows **Extract All** wraps it in
 :::
 
 <div class="lab-grid lab-grid-3">
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch-starter.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/the-dispatch-starter.zip" download>
 		<span class="lab-card-emoji">📦</span>
 		<span class="lab-card-title">Starter repo</span>
 		<span class="lab-card-desc">The dashboard, a room with teams already seated, the intake gate, and the MCP server. The parts that you build are marked with TODO comments.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🟢</span>
 		<span class="lab-card-title">Dispatch skill</span>
 		<span class="lab-card-desc">How the room routes a request, plus the single triager's decisions. This is the "before" that you compare against, and it never changes.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">Data pack</span>
 		<span class="lab-card-desc">Sample requests, the Global Skilling team cards, and the routing rules. Use these instead of real work data.</span>

@@ -48,7 +48,7 @@ VS Code, Copilot CLI, GitHub Copilot 앱 중 원하는 GitHub Copilot 환경에�
 
 아래 스타터를 다운로드하세요.
 
-<a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/twin-code-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
   <span class="lab-card-title">스타터</span>
   <span class="lab-card-desc">바로 답변할 수 있는 가상의 트윈입니다. Python에서 호출하는 코드 하나, 코드 및 비코드 작업을 아우르는 완성된 예제 네 개, MCP 서버, 자신에게 맞게 설정하는 인터뷰가 포함되어 있습니다.</span>

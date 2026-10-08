@@ -47,7 +47,7 @@ Copilot은 이미 여러분의 메일, 일정, 파일을 읽을 수 있습니다
 
 아래 스킬을 다운로드하세요.
 
-<a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-SKILL.md" download="SKILL.md" style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/my-twin-SKILL.md" download="SKILL.md" style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>
   <span class="lab-card-title">여러분의 트윈</span>
   <span class="lab-card-desc">여러분의 업무를 읽고 스스로 구축되는 스킬입니다. SKILL.md로 저장되며, Downloads 폴더에 그대로 두세요.</span>

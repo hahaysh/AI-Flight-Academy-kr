@@ -46,13 +46,13 @@ title: Dispatch - Cowork
 지금 이 두 파일을 다운로드하세요. 시작 후 몇 분 안에 필요합니다.
 
 <div class="lab-grid lab-grid-2">
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🟢</span>
 		<span class="lab-card-title">Dispatch</span>
 		<span class="lab-card-desc">방을 운영하고 방 파일을 만드는 Cowork 스킬입니다.</span>
 		<span class="lab-card-cta">.zip 다운로드 →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">데이터 팩</span>
 		<span class="lab-card-desc">샘플 요청, Global Skilling 팀 카드, 라우팅 규칙입니다. 실제 업무 데이터 대신 사용하세요.</span>

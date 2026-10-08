@@ -47,7 +47,7 @@ Scout는 이미 여러분의 메일, 일정, 파일을 읽을 수 있습니다. 
 
 아래 스킬을 다운로드하세요.
 
-<a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/my-twin-scout.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>
   <span class="lab-card-title">여러분의 트윈</span>
   <span class="lab-card-desc">스킬과 이를 기반으로 만든 완성된 예제 하나입니다.</span>

@@ -58,19 +58,19 @@ title: Dispatch - Code
 :::
 
 <div class="lab-grid lab-grid-3">
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch-starter.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/the-dispatch-starter.zip" download>
 		<span class="lab-card-emoji">📦</span>
 		<span class="lab-card-title">스타터 리포지토리</span>
 		<span class="lab-card-desc">대시보드, 팀이 이미 배치된 방, 접수 게이트, MCP 서버입니다. 직접 빌드할 부분에는 TODO 주석이 표시되어 있습니다.</span>
 		<span class="lab-card-cta">.zip 다운로드 →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🟢</span>
 		<span class="lab-card-title">Dispatch 스킬</span>
 		<span class="lab-card-desc">방이 요청을 라우팅하는 방식과 분류 담당자 한 명의 결정을 담고 있습니다. 비교 기준이 되는 "이전" 상태이며 절대 바뀌지 않습니다.</span>
 		<span class="lab-card-cta">.zip 다운로드 →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">데이터 팩</span>
 		<span class="lab-card-desc">샘플 요청, Global Skilling 팀 카드, 라우팅 규칙입니다. 실제 업무 데이터 대신 사용하세요.</span>

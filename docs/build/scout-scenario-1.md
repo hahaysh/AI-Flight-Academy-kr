@@ -47,7 +47,7 @@ For more definitions, see the [Glossary](/glossary).
 
 Download the skill below.
 
-<a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/my-twin-scout.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>
   <span class="lab-card-title">Your twin</span>
   <span class="lab-card-desc">The skill, plus one worked example built on it.</span>

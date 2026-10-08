@@ -9,7 +9,7 @@ export default defineConfig({
   title: "AI Flight Academy",
   description:
     "A 2-hour hands-on agent-building session for Global Skilling Team Week. Two hours, your tools, and a real problem to crack.",
-  base: "/AI-Flight-Academy/",
+  base: "/AI-Flight-Academy-kr/",
   cleanUrls: true,
   // The packer writes a .md into public/ for Cowork to download. Without this,
   // VitePress also renders it as a page at /public/downloads/.
@@ -93,7 +93,11 @@ export default defineConfig({
   head: [
     [
       "link",
-      { rel: "icon", type: "image/svg+xml", href: "/AI-Flight-Academy/favicon.svg" },
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/AI-Flight-Academy-kr/favicon.svg",
+      },
     ],
   ],
   themeConfig: {
@@ -111,7 +115,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/MicrosoftLearning/AI-Flight-Academy/",
+        link: "https://github.com/hahaysh/AI-Flight-Academy-kr/",
       },
     ],
     footer: {

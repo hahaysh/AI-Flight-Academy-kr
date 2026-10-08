@@ -41,7 +41,7 @@ For more definitions, see the [Glossary](/glossary).
 
 Download the starter below.
 
-<a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-starter.zip" download style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/ambassador-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
   <span class="lab-card-title">Starter</span>
   <span class="lab-card-desc">A working cohort script, three alternative definitions, and the nine data files.</span>

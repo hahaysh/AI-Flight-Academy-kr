@@ -42,13 +42,13 @@ Contoso의 AI 스킬링 앰배서더 프로그램은 본업과 함께 오피스 
 아래 두 파일을 다운로드해 같은 폴더에 보관하세요.
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy-kr/downloads/ambassador-skill.zip" download>
     <span class="lab-card-emoji">🎖️</span>
     <span class="lab-card-title">Ambassador skill</span>
     <span class="lab-card-desc">프로그램이 다음 8명을 선발하는 방식과 원하는 인재상에 대한 세 가지 대안 정의입니다. 변경 후 비교할 기준인 "이전" 버전입니다.</span>
     <span class="lab-card-cta">.zip 다운로드 →</span>
   </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy-kr/downloads/ambassador-program-data.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">프로그램 데이터</span>
     <span class="lab-card-desc">9개 파일에 담긴 후보자 72명과 약 2,000개의 근거 기록입니다. 실제 인물 데이터 대신 사용하세요.</span>

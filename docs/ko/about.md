@@ -183,7 +183,7 @@ description: AI Flight Academy를 만든 V-team을 소개합니다.
 
 </div>
 
-<p class="about-intro">Team Week 2026 Anaheim 현장에서 진행되었습니다. Ground Crew로 참여한 모든 코치, SME, 테스터에게 감사드립니다. 비행할 준비가 되었나요? <a href="/AI-Flight-Academy/ko/#start-here">실습 경로를 선택하세요</a>.</p>
+<p class="about-intro">Team Week 2026 Anaheim 현장에서 진행되었습니다. Ground Crew로 참여한 모든 코치, SME, 테스터에게 감사드립니다. 비행할 준비가 되었나요? <a href="/AI-Flight-Academy-kr/ko/#start-here">실습 경로를 선택하세요</a>.</p>
 
 </div>
 <!-- markdownlint-enable MD033 MD041 -->

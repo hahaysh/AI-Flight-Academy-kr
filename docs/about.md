@@ -183,7 +183,7 @@ description: Meet the V-team behind AI Flight Academy.
 
 </div>
 
-<p class="about-intro">Recorded live at Team Week 2026, Anaheim. Thanks to every coach, SME, and tester who joined the ground crew. Ready to fly? <a href="/AI-Flight-Academy/#start-here">Pick your path</a>.</p>
+<p class="about-intro">Recorded live at Team Week 2026, Anaheim. Thanks to every coach, SME, and tester who joined the ground crew. Ready to fly? <a href="/AI-Flight-Academy-kr/#start-here">Pick your path</a>.</p>
 
 </div>
 <!-- markdownlint-enable MD033 MD041 -->

@@ -18,7 +18,7 @@ Three scenarios, each buildable at three altitudes, so everyone works on the sam
 
 ## The site
 
-<https://microsoftlearning.github.io/AI-Flight-Academy/>
+<https://hahaysh.github.io/AI-Flight-Academy-kr/>
 
 Built with [VitePress](https://vitepress.dev/) and deployed to GitHub Pages by `.github/workflows/deploy-vitepress.yml` on every push to `main`.
 

@@ -46,13 +46,13 @@ For more definitions, see the [Glossary](/glossary).
 Download these two files now. You'll need them in the first few minutes.
 
 <div class="lab-grid lab-grid-2">
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🟢</span>
 		<span class="lab-card-title">Dispatch</span>
 		<span class="lab-card-desc">The Cowork skill that runs the room and creates your room file.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy-kr/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">Data pack</span>
 		<span class="lab-card-desc">Sample requests, the Global Skilling team cards, and the routing rules. Use these instead of real work data.</span>
