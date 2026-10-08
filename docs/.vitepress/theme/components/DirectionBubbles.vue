@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { computed } from "vue";
+import { useRoute } from "vitepress";
+import { getMessages, localeFromPath } from "../../data/locales";
 
 type Direction = {
   emoji: string;
@@ -12,6 +15,8 @@ type Direction = {
 };
 
 const props = defineProps<{ items: Direction[]; startLabel?: string }>();
+const route = useRoute();
+const messages = computed(() => getMessages(localeFromPath(route.path)));
 
 const open = ref<number | null>(null);
 const copied = ref<number | null>(null);
@@ -71,14 +76,16 @@ async function copy(i: number) {
 
       <div v-if="open === i" class="direction-bubble-body">
         <p class="direction-bubble-start">
-          <strong>{{ startLabel ?? "Your first ten minutes" }}:</strong>{{ " " }}
+          <strong>{{ startLabel ?? messages.components.firstMinutes }}:</strong>{{ " " }}
           <span v-html="inline(d.start)" />
         </p>
-        <div class="direction-bubble-prompt-label">Try saying something like</div>
+        <div class="direction-bubble-prompt-label">
+          {{ messages.components.trySaying }}
+        </div>
         <div class="direction-bubble-prompt">
           <p>{{ d.prompt }}</p>
           <button type="button" class="direction-bubble-copy" @click="copy(i)">
-            {{ copied === i ? "Copied" : "Copy" }}
+            {{ copied === i ? messages.components.copied : messages.components.copy }}
           </button>
         </div>
       </div>

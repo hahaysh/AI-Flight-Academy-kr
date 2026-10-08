@@ -36,6 +36,7 @@ html:not(.dark) .dark-only {
     width: 220px;
     height: 220px;
   }
+
 }
 
 /* Cool circular glow behind the hero image (replaces the default blurred blob) */
@@ -51,6 +52,13 @@ html:not(.dark) .dark-only {
   );
   filter: blur(8px);
   opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .VPHero .image-bg {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 /* A soft gradient ring that frames the image in a circle */
@@ -740,6 +748,20 @@ html:not(.dark) .goal-card-emoji {
   color: var(--vp-c-text-2);
 }
 
+html[lang="ko-KR"] :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  .VPHero .text,
+  .goal-card-title,
+  .lab-card-title,
+  .picker-bubble-title,
+  .picker-bubble-sub
+) {
+  word-break: keep-all;
+}
+
 .goal-card.is-blue { --goal-accent: #3b82f6; --goal-wash: rgba(59, 130, 246, 0.09); }
 .goal-card.is-green { --goal-accent: #16a34a; --goal-wash: rgba(22, 163, 74, 0.09); }
 .goal-card.is-orange { --goal-accent: #ea580c; --goal-wash: rgba(234, 88, 12, 0.09); }
@@ -1210,4 +1232,3 @@ html:not(.dark) .goal-card-emoji {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-

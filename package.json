@@ -9,6 +9,9 @@
   },
   "scripts": {
     "pack": "node scripts/pack-downloads.mjs",
+    "check:i18n": "node scripts/check-localization-sync.mjs",
+    "check:prompts": "node scripts/check-prompt-fidelity.mjs",
+    "update:i18n": "node scripts/check-localization-sync.mjs --update",
     "docs:dev": "npm run pack && vitepress dev docs",
     "docs:build": "npm run pack && vitepress build docs",
     "docs:preview": "vitepress preview docs",

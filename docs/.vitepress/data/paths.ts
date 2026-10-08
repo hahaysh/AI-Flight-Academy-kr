@@ -2,6 +2,8 @@
 // Imported by .vitepress/config.mts (nav + sidebar) and by the Vue components
 // (PathPicker, BuildMatrix) so every entry point stays in sync automatically.
 
+import { getMessages, localizedPath, type SiteLocale } from "./locales";
+
 export type Status = "ready" | "wip" | "soon";
 
 export interface Track {
@@ -125,12 +127,23 @@ export const statusLabel: Record<Status, string> = {
   soon: "Coming soon",
 };
 
+export function statusLabelFor(
+  status: Status,
+  locale: SiteLocale = "en"
+): string {
+  return getMessages(locale).status[status];
+}
+
 export function buildId(trackId: string, scenarioId: string): string {
   return `${trackId}-${scenarioId}`;
 }
 
-export function buildLink(trackId: string, scenarioId: string): string {
-  return `/build/${buildId(trackId, scenarioId)}`;
+export function buildLink(
+  trackId: string,
+  scenarioId: string,
+  locale: SiteLocale = "en"
+): string {
+  return localizedPath(`/build/${buildId(trackId, scenarioId)}`, locale);
 }
 
 export function statusFor(trackId: string, scenarioId: string): Status {
@@ -145,6 +158,41 @@ export function getScenario(scenarioId: string): Scenario | undefined {
   return [SCENARIO_0, ...scenarios].find((s) => s.id === scenarioId);
 }
 
+export function getTracks(locale: SiteLocale = "en"): Track[] {
+  const localized = getMessages(locale).tracks;
+  return tracks.map((track) => ({ ...track, ...localized[track.id] }));
+}
+
+export function getScenarios(locale: SiteLocale = "en"): Scenario[] {
+  const localized = getMessages(locale).scenarios;
+  return scenarios.map((scenario) => ({
+    ...scenario,
+    ...localized[scenario.id],
+  }));
+}
+
+export function getTrackForLocale(
+  trackId: string,
+  locale: SiteLocale = "en"
+): Track | undefined {
+  return getTracks(locale).find((track) => track.id === trackId);
+}
+
+export function getScenarioForLocale(
+  scenarioId: string,
+  locale: SiteLocale = "en"
+): Scenario | undefined {
+  const scenario = getScenario(scenarioId);
+  if (!scenario) return undefined;
+  return {
+    ...scenario,
+    ...getMessages(locale).scenarios[scenarioId],
+  };
+}
 
 /** The single chooser lives on the home page. Everything points at it. */
 export const CHOOSER = "/#start-here";
+
+export function chooserLink(locale: SiteLocale = "en"): string {
+  return localizedPath(CHOOSER, locale);
+}

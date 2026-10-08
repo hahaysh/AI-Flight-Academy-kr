@@ -1,5 +1,9 @@
 import { defineConfig } from "vitepress";
 import { navBuildItems, sidebars, isBuildPage } from "./data/sidebar";
+import { getMessages } from "./data/locales";
+
+const en = getMessages("en");
+const ko = getMessages("ko");
 
 export default defineConfig({
   title: "AI Flight Academy",
@@ -13,6 +17,72 @@ export default defineConfig({
   // Dark by default - the scenario art and the altitude colours were built
   // against it. The toggle still works for anyone who prefers light.
   appearance: "dark",
+  locales: {
+    root: {
+      label: "English",
+      lang: "en-US",
+      themeConfig: {
+        nav: [
+          { text: en.nav.home, link: "/" },
+          { text: en.nav.startBuilding, items: navBuildItems("en") },
+          { text: en.nav.glossary, link: "/glossary" },
+          { text: en.nav.about, link: "/about" },
+        ],
+        sidebar: sidebars("en"),
+      },
+    },
+    ko: {
+      label: "한국어",
+      lang: "ko-KR",
+      link: "/ko/",
+      title: "AI Flight Academy",
+      description:
+        "Global Skilling Team Week를 위한 2시간 실습형 에이전트 빌딩 세션입니다.",
+      themeConfig: {
+        nav: [
+          { text: ko.nav.home, link: "/ko/" },
+          { text: ko.nav.startBuilding, items: navBuildItems("ko") },
+          { text: ko.nav.glossary, link: "/ko/glossary" },
+          { text: ko.nav.about, link: "/ko/about" },
+        ],
+        sidebar: sidebars("ko"),
+        outline: { label: "이 페이지의 내용" },
+        darkModeSwitchLabel: "테마",
+        lightModeSwitchTitle: "라이트 모드로 전환",
+        darkModeSwitchTitle: "다크 모드로 전환",
+        sidebarMenuLabel: "메뉴",
+        returnToTopLabel: "맨 위로",
+        langMenuLabel: "언어 변경",
+        skipToContentLabel: "본문으로 건너뛰기",
+        search: {
+          provider: "local",
+          options: {
+            translations: {
+              button: {
+                buttonText: "검색",
+                buttonAriaLabel: "검색",
+              },
+              modal: {
+                displayDetails: "세부 목록 표시",
+                resetButtonTitle: "검색 초기화",
+                backButtonTitle: "검색 닫기",
+                noResultsText: "검색 결과가 없습니다.",
+                footer: {
+                  selectText: "선택",
+                  selectKeyAriaLabel: "Enter 키",
+                  navigateText: "이동",
+                  navigateUpKeyAriaLabel: "위쪽 화살표",
+                  navigateDownKeyAriaLabel: "아래쪽 화살표",
+                  closeText: "닫기",
+                  closeKeyAriaLabel: "Esc 키",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
   // Build pages carry their steps in the sidebar, under the level you're on,
   // so the right-hand outline would just be a second copy of the same list.
   transformPageData(pageData) {
@@ -27,18 +97,6 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
-    nav: [
-      { text: "Home", link: "/" },
-      {
-        text: "Start Building",
-        items: navBuildItems(),
-      },
-      {
-        text: "Glossary",
-        link: "/glossary",
-      },
-      { text: "About", link: "/about" },
-    ],
     search: {
       provider: "local",
     },
@@ -50,7 +108,6 @@ export default defineConfig({
       next: false,
     },
     outline: { level: [2, 3] },
-    sidebar: sidebars(),
     socialLinks: [
       {
         icon: "github",

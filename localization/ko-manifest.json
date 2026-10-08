@@ -1,0 +1,59 @@
+{
+  "locale": "ko",
+  "sourceRepository": "MicrosoftLearning/AI-Flight-Academy",
+  "sourceRevision": "01817799fa9ca50e61ea6a33081fa3044834825d",
+  "pages": {
+    "docs/index.md": {
+      "translation": "docs/ko/index.md",
+      "sourceHash": "fb729dcae4e2af2a2f7dd7b4a47b55cdedc3cd8819db29637743c8cc7ba3965d"
+    },
+    "docs/about.md": {
+      "translation": "docs/ko/about.md",
+      "sourceHash": "205b278762059546c1c256fcb6f89eb55f4f4343f9c952db7fd0b56a2f782096"
+    },
+    "docs/glossary.md": {
+      "translation": "docs/ko/glossary.md",
+      "sourceHash": "95b9a2078d50e6f06b80eaaccb372dfdc256b6b0ee7a53e7c4f93df1118f7233"
+    },
+    "docs/levels/index.md": {
+      "translation": "docs/ko/levels/index.md",
+      "sourceHash": "d8174b538d898df70d680a1ca66ab99afc9138a32e2d46921855b4e95ff2b669"
+    },
+    "docs/build/cowork-scenario-1.md": {
+      "translation": "docs/ko/build/cowork-scenario-1.md",
+      "sourceHash": "499964ce62449a03ae995778358be3c19e872249df0a13569cbd8533e1229597"
+    },
+    "docs/build/scout-scenario-1.md": {
+      "translation": "docs/ko/build/scout-scenario-1.md",
+      "sourceHash": "8b4f71b082c32f64dd23bbec9d8f5ed727eac433919ee8e11d99f7d40d1aeb6b"
+    },
+    "docs/build/code-scenario-1.md": {
+      "translation": "docs/ko/build/code-scenario-1.md",
+      "sourceHash": "d51cd2a883f13b103276c8ec627bdf7bf1324aefc20ea7f0fa17227d28a07dc9"
+    },
+    "docs/build/cowork-scenario-2.md": {
+      "translation": "docs/ko/build/cowork-scenario-2.md",
+      "sourceHash": "c0889ced7c12120a1cb77a4c851da47be8efd13abc6715d69a103d60742d22d3"
+    },
+    "docs/build/scout-scenario-2.md": {
+      "translation": "docs/ko/build/scout-scenario-2.md",
+      "sourceHash": "0f6d71bdbd80b31b65dda0d8ab155d29a616b05103191ad86f35107e49386593"
+    },
+    "docs/build/code-scenario-2.md": {
+      "translation": "docs/ko/build/code-scenario-2.md",
+      "sourceHash": "24653bfc227bc6682399c361f7e2bdd344ec2fe1bac7b422ae14a7083b3eb990"
+    },
+    "docs/build/cowork-scenario-3.md": {
+      "translation": "docs/ko/build/cowork-scenario-3.md",
+      "sourceHash": "f91924c8f2e507af2294587432047d8e530e6ddf9c9b306cabd12b3a0bd2b75a"
+    },
+    "docs/build/scout-scenario-3.md": {
+      "translation": "docs/ko/build/scout-scenario-3.md",
+      "sourceHash": "05dc8650366e64fca1690e06a42caf4ef017b98b94caf06db8d5fa4cf5d9202a"
+    },
+    "docs/build/code-scenario-3.md": {
+      "translation": "docs/ko/build/code-scenario-3.md",
+      "sourceHash": "4ce2d5b73e6f7338fc4cddee31620164bab3610d2eab59dca2d1907244538a71"
+    }
+  }
+}

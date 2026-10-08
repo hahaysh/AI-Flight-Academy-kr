@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, withBase } from "vitepress";
-import { getTrack, getScenario, statusFor, statusLabel, CHOOSER, SCENARIO_0 } from "../../data/paths";
+import {
+  chooserLink,
+  getTrackForLocale,
+  getScenarioForLocale,
+  statusFor,
+  statusLabelFor,
+  SCENARIO_0,
+} from "../../data/paths";
+import { getMessages, localeFromPath } from "../../data/locales";
 
 const route = useRoute();
 
@@ -9,10 +17,17 @@ const route = useRoute();
 const parsed = computed(() => {
   const m = route.path.match(/\/build\/([a-z]+)-(scenario-\d+)/);
   if (!m) return null;
-  const track = getTrack(m[1]);
-  const scenario = getScenario(m[2]);
+  const locale = localeFromPath(route.path);
+  const track = getTrackForLocale(m[1], locale);
+  const scenario = getScenarioForLocale(m[2], locale);
   if (!track || !scenario) return null;
-  return { track, scenario, status: statusLabel[statusFor(m[1], m[2])] };
+  return {
+    track,
+    scenario,
+    locale,
+    messages: getMessages(locale),
+    status: statusLabelFor(statusFor(m[1], m[2]), locale),
+  };
 });
 </script>
 
@@ -25,7 +40,9 @@ const parsed = computed(() => {
       <span v-if="parsed.status" class="build-bar-status">{{ parsed.status }}</span>
     </div>
     <nav v-if="parsed.scenario.id !== SCENARIO_0.id" class="build-bar-links">
-      <a :href="withBase(CHOOSER)">Switch path</a>
+      <a :href="withBase(chooserLink(parsed.locale))">
+        {{ parsed.messages.components.switchPath }}
+      </a>
     </nav>
   </div>
 </template>

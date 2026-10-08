@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { computed } from "vue";
+import { useRoute } from "vitepress";
+import { getMessages, localeFromPath } from "../../data/locales";
 
 withDefaults(
   defineProps<{
@@ -23,6 +26,8 @@ withDefaults(
 );
 
 const selected = ref<"a" | "b" | null>(null);
+const route = useRoute();
+const messages = computed(() => getMessages(localeFromPath(route.path)));
 </script>
 
 <template>
@@ -32,20 +37,20 @@ const selected = ref<"a" | "b" | null>(null);
         <span class="path-bubble-emoji">{{ aEmoji }}</span>
         <span class="path-bubble-title">{{ aTitle }}</span>
         <span class="path-bubble-desc">{{ aDesc }}</span>
-        <span class="path-bubble-cta">Choose this path &rarr;</span>
+        <span class="path-bubble-cta">{{ messages.components.choosePath }}</span>
       </button>
 
       <button type="button" class="path-bubble" @click="selected = 'b'">
         <span class="path-bubble-emoji">{{ bEmoji }}</span>
         <span class="path-bubble-title">{{ bTitle }}</span>
         <span class="path-bubble-desc">{{ bDesc }}</span>
-        <span class="path-bubble-cta">Choose this path &rarr;</span>
+        <span class="path-bubble-cta">{{ messages.components.choosePath }}</span>
       </button>
     </div>
 
     <div v-else class="path-panel">
       <button type="button" class="path-back" @click="selected = null">
-        &larr; Choose a different path
+        {{ messages.components.chooseDifferentPath }}
       </button>
 
       <div v-show="selected === 'a'" class="path-body">

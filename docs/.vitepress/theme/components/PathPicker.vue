@@ -1,15 +1,21 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import { useRouter, withBase } from "vitepress";
+import { useRoute, useRouter, withBase } from "vitepress";
 import {
-  tracks,
-  scenarios,
+  getTracks,
+  getScenarios,
   buildLink,
   statusFor,
-  statusLabel,
+  statusLabelFor,
 } from "../../data/paths";
+import { getMessages, localeFromPath } from "../../data/locales";
 
 const router = useRouter();
+const route = useRoute();
+const locale = computed(() => localeFromPath(route.path));
+const messages = computed(() => getMessages(locale.value));
+const tracks = computed(() => getTracks(locale.value));
+const scenarios = computed(() => getScenarios(locale.value));
 
 const track = ref<string | null>(null);
 const scenario = ref<string | null>(null);
@@ -17,24 +23,26 @@ const scenario = ref<string | null>(null);
 const ready = computed(() => track.value !== null && scenario.value !== null);
 
 const chosenTrack = computed(() =>
-  tracks.find((t) => t.id === track.value)
+  tracks.value.find((t) => t.id === track.value)
 );
 const chosenScenario = computed(() =>
-  scenarios.find((s) => s.id === scenario.value)
+  scenarios.value.find((s) => s.id === scenario.value)
 );
 
 const chosenStatus = computed(() =>
-  ready.value ? statusLabel[statusFor(track.value!, scenario.value!)] : ""
+  ready.value
+    ? statusLabelFor(statusFor(track.value!, scenario.value!), locale.value)
+    : ""
 );
 
 function comboStatus(scenarioId: string) {
   if (!track.value) return "";
-  return statusLabel[statusFor(track.value, scenarioId)];
+  return statusLabelFor(statusFor(track.value, scenarioId), locale.value);
 }
 
 function start() {
   if (!ready.value) return;
-  router.go(withBase(buildLink(track.value!, scenario.value!)));
+  router.go(withBase(buildLink(track.value!, scenario.value!, locale.value)));
 }
 
 function reset() {
@@ -57,12 +65,13 @@ function bold(s: string) {
     <div class="picker-step">
       <div class="picker-step-head">
         <span class="picker-step-num" :class="{ done: track }">1</span>
-        <span class="picker-step-label">Pick your altitude</span>
+        <span class="picker-step-label">{{ messages.picker.pickAltitude }}</span>
       </div>
       <p class="picker-step-note">
-        What the team builds with. Fly at the altitude that suits you - pick
-        where you'll actually get something done.
-        <a :href="withBase('/levels/')">Compare them →</a>
+        {{ messages.picker.altitudeHelp }}
+        <a :href="withBase(locale === 'ko' ? '/ko/levels/' : '/levels/')">
+          {{ messages.picker.compare }}
+        </a>
       </p>
       <div class="picker-options">
         <button
@@ -86,7 +95,7 @@ function bold(s: string) {
     <div class="picker-step" :class="{ dimmed: !track }">
       <div class="picker-step-head">
         <span class="picker-step-num" :class="{ done: scenario }">2</span>
-        <span class="picker-step-label">Pick your scenario</span>
+        <span class="picker-step-label">{{ messages.picker.pickScenario }}</span>
       </div>
       <div class="picker-options">
         <button
@@ -123,7 +132,7 @@ function bold(s: string) {
           :disabled="!ready"
           @click="start"
         >
-          Start building →
+          {{ messages.picker.startBuilding }}
         </button>
         <button
           v-if="track || scenario"
@@ -131,7 +140,7 @@ function bold(s: string) {
           class="picker-reset"
           @click="reset"
         >
-          Reset
+          {{ messages.picker.reset }}
         </button>
       </div>
     </div>

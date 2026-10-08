@@ -8,21 +8,30 @@ import {
   buildId,
   buildLink,
   statusFor,
-  statusLabel,
-  getTrack,
-  getScenario,
-  CHOOSER,
+  statusLabelFor,
+  getTrackForLocale,
+  getScenarioForLocale,
+  getTracks,
+  getScenarios,
+  chooserLink,
   SCENARIO_0,
 } from "./paths";
 import { pageHeadings, type Heading } from "./headings";
+import { getMessages, localizedPath, type SiteLocale } from "./locales";
 
-function suffix(trackId: string, scenarioId: string): string {
-  const label = statusLabel[statusFor(trackId, scenarioId)];
+function suffix(
+  trackId: string,
+  scenarioId: string,
+  locale: SiteLocale
+): string {
+  const label = statusLabelFor(statusFor(trackId, scenarioId), locale);
   return label ? ` (${label})` : "";
 }
 
 export function isBuildPage(relativePath: string): boolean {
-  return /^build\/(cowork|scout|code)-scenario-\d+\.md$/.test(relativePath);
+  return /^(?:ko\/)?build\/(cowork|scout|code)-scenario-\d+\.md$/.test(
+    relativePath
+  );
 }
 
 /**
@@ -55,14 +64,17 @@ function nestSteps(steps: Heading[], link: string) {
  * scenarios. Its pages still build and stay reachable by URL - see the SCENARIO_0
  * comment in paths.ts for how to put the links back afterwards.
  */
-export function navBuildItems() {
+export function navBuildItems(locale: SiteLocale = "en") {
+  const messages = getMessages(locale);
+  const localizedTracks = getTracks(locale);
+  const localizedScenarios = getScenarios(locale);
   return [
-    { text: "🧭 Pick your path", link: CHOOSER },
-    ...scenarios.map((s) => ({
+    { text: messages.picker.pickPath, link: chooserLink(locale) },
+    ...localizedScenarios.map((s) => ({
       text: `${s.emoji} ${s.label} · ${s.name}`,
-      items: tracks.map((t) => ({
-        text: `${t.emoji} ${t.label} - ${t.tool}${suffix(t.id, s.id)}`,
-        link: buildLink(t.id, s.id),
+      items: localizedTracks.map((t) => ({
+        text: `${t.emoji} ${t.label} - ${t.tool}${suffix(t.id, s.id, locale)}`,
+        link: buildLink(t.id, s.id, locale),
       })),
     })),
   ];
@@ -78,20 +90,37 @@ export function navBuildItems() {
  * rail answers both "which path am I on" and "where am I in it".
  */
 export function globalSidebar(
-  opts: { scenario?: string; track?: string; steps?: boolean; lean?: boolean } = {}
+  opts: {
+    scenario?: string;
+    track?: string;
+    steps?: boolean;
+    lean?: boolean;
+    locale?: SiteLocale;
+  } = {}
 ) {
-  const scenario = opts.scenario ? getScenario(opts.scenario) : undefined;
-  const track = opts.track ? getTrack(opts.track) : undefined;
+  const locale = opts.locale ?? "en";
+  const messages = getMessages(locale);
+  const localizedTracks = getTracks(locale);
+  const localizedScenarios = getScenarios(locale);
+  const scenario = opts.scenario
+    ? getScenarioForLocale(opts.scenario, locale)
+    : undefined;
+  const track = opts.track
+    ? getTrackForLocale(opts.track, locale)
+    : undefined;
 
   const trackItems = (scenarioId: string) =>
-    tracks.map((t) => {
-      const link = buildLink(t.id, scenarioId);
+    localizedTracks.map((t) => {
+      const link = buildLink(t.id, scenarioId, locale);
       const item: any = {
-        text: `${t.emoji} ${t.label}${suffix(t.id, scenarioId)}`,
+        text: `${t.emoji} ${t.label}${suffix(t.id, scenarioId, locale)}`,
         link,
       };
       if (opts.steps && track && t.id === track.id) {
-        const steps = pageHeadings(`build/${buildId(t.id, scenarioId)}.md`);
+        const prefix = locale === "ko" ? "ko/" : "";
+        const steps = pageHeadings(
+          `${prefix}build/${buildId(t.id, scenarioId)}.md`
+        );
         if (steps.length) {
           item.items = nestSteps(steps, link);
           item.collapsed = false;
@@ -105,24 +134,30 @@ export function globalSidebar(
         text: `${scenario.emoji} ${scenario.name}`,
         items: [
           ...(scenario.id === SCENARIO_0.id
-            ? [{ text: "Start here", link: `/scenarios/${scenario.id}` }]
+            ? [{
+                text: messages.sidebar.startHere,
+                link: localizedPath(`/scenarios/${scenario.id}`, locale),
+              }]
             : []),
           ...trackItems(scenario.id),
           ...(scenario.id === SCENARIO_0.id
             ? []
-            : [{ text: "↔ Switch scenario", link: CHOOSER }]),
+            : [{
+                text: messages.sidebar.switchScenario,
+                link: chooserLink(locale),
+              }]),
         ],
       }
     : {
-        text: "Scenarios",
+        text: messages.sidebar.scenarios,
         items: [
-          ...scenarios.map((s) => ({
+          ...localizedScenarios.map((s) => ({
             text: `${s.emoji} ${s.name}`,
             collapsed: true,
             items: [
-              ...tracks.map((t) => ({
-                text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
-                link: buildLink(t.id, s.id),
+              ...localizedTracks.map((t) => ({
+                text: `${t.emoji} ${t.label}${suffix(t.id, s.id, locale)}`,
+                link: buildLink(t.id, s.id, locale),
               })),
             ],
           })),
@@ -131,8 +166,11 @@ export function globalSidebar(
 
   // Everything that isn't a scenario.
   const guidesSection = {
-    text: "Reference",
-    items: [{ text: "Glossary", link: "/glossary" }],
+    text: messages.sidebar.reference,
+    items: [{
+      text: messages.nav.glossary,
+      link: localizedPath("/glossary", locale),
+    }],
   };
 
   // A lean rail is just "where am I in this path" - nothing else. Scenario 0 is
@@ -144,10 +182,13 @@ export function globalSidebar(
 
   return [
     {
-      text: "AI Flight Academy",
+      text: messages.sidebar.academy,
       items: [
-        { text: "Home", link: "/" },
-        { text: "Which altitude is right for me?", link: "/levels/" },
+        { text: messages.nav.home, link: localizedPath("/", locale) },
+        {
+          text: messages.sidebar.altitudeGuide,
+          link: localizedPath("/levels/", locale),
+        },
       ],
     },
     scenarioSection,
@@ -159,25 +200,30 @@ export function globalSidebar(
  * A sidebar per route, so what you see is already scoped to your choice when
  * you land. Keys with more path segments win, so specific routes beat "/".
  */
-export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
+export function sidebars(
+  locale: SiteLocale = "en"
+): Record<string, ReturnType<typeof globalSidebar>> {
   const out: Record<string, any> = {};
   for (const s of [SCENARIO_0, ...scenarios]) {
+    if (locale === "ko" && s.id === SCENARIO_0.id) continue;
     for (const t of tracks) {
-      out[buildLink(t.id, s.id)] = globalSidebar({
+      out[buildLink(t.id, s.id, locale)] = globalSidebar({
         scenario: s.id,
         track: t.id,
         steps: true,
         lean: s.id === SCENARIO_0.id,
+        locale,
       });
     }
     if (s.id === SCENARIO_0.id) {
-      out[`/scenarios/${s.id}`] = globalSidebar({
+      out[localizedPath(`/scenarios/${s.id}`, locale)] = globalSidebar({
         scenario: s.id,
         lean: true,
+        locale,
       });
     }
   }
-  out["/glossary"] = globalSidebar();
-  out["/"] = globalSidebar();
+  out[localizedPath("/glossary", locale)] = globalSidebar({ locale });
+  out[localizedPath("/", locale)] = globalSidebar({ locale });
   return out;
 }
